@@ -14,10 +14,10 @@
 //Number 1 is Nicki in frame 1, Robbie in frame 2, for Alien 2 sy needs to be moved down for Sprites located underneath.
      2:  [[0,0,0,0,0,0,0,0,0,0,0],
           [0,1,1,1,1,1,1,1,1,1,0],
-          [0,1,1,1,1,1,1,1,1,1,0],
-          [0,1,1,1,1,1,1,1,1,1,0],
           [0,0,0,0,0,0,0,0,0,0,0],
+          [0,2,2,2,2,2,2,2,2,2,0],
           [0,0,0,0,0,0,0,0,0,0,0],
+          [0,1,1,1,1,1,1,1,1,1,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
@@ -49,7 +49,7 @@
 //This is where to change the aliens, player and lazers in terms of their positioning within the sprites.
 var spriteData = {
     'alien1': { sx: 0,  sy: 0,  w: 41, h: 37, cls: Alien, frames: 2 },
-    'alien2': { sx: 0,  sy: 18, w: 23, h: 18, cls: Alien, frames: 2 },
+    'alien2': { sx: 0,  sy: 38, w: 41, h: 37, cls: Alien, frames: 2 },
     'player': { sx: 103,  sy: 46, w: 62, h: 55, cls: Player },
     'missile': { sx: 169,  sy:66, w: 31,  h: 34, cls: Missile }
   }
