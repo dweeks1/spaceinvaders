@@ -41,14 +41,14 @@ var Sprites = new function() {
     this.map = sprite_data;
     this.image = new Image();
     this.image.onload = callback;
-    this.image.src = 'images/sprites.png';
+    this.image.src = 'images/sprites.png'; //This is where to upload the png file for your sprite sheet
   };
 
 //This creates the setup for the positioning of sprites,which can be changed in levels.js
   this.draw = function(canvas,sprite,x,y,frame) {
     var s = this.map[sprite];
     if(!frame) frame = 0;
-    canvas.drawImage(this.image, s.sx + frame * s.w, s.sy, s.w, s.h, x,y, s.w, s.h);
+    canvas.drawImage(this.image, s.sx + frame * s.w, s.sy, s.w, s.h, x,y, s.w, s.h); // This is the setup for the sprite position in the frame
   };
 }
 
@@ -61,10 +61,10 @@ var GameScreen = function GameScreen(text,text2,callback) {
   this.render = function(canvas) {
     canvas.clearRect(0,0,Game.width,Game.height);
 //This here refers to font style, size and type, as well as the position it is on the screen and colour
-      canvas.font = "bold 40px arial";
+      canvas.font = "bold 70px arial";
     var measure = canvas.measureText(text);  
-    canvas.fillStyle = "#000";
-    canvas.fillText(text,Game.width/2 - measure.width/2,Game.height/2);
+    canvas.fillStyle = "#000"; //Colour of writing
+    canvas.fillText(text,Game.width/2 - measure.width/2,Game.height/2); //Position on screen /2 is half way down and across the screen, exactly central
     canvas.font = "bold 20px arial";
     var measure2 = canvas.measureText(text2);
     canvas.fillText(text2,Game.width/2 - measure2.width/2,Game.height/2 + 40);
@@ -159,6 +159,8 @@ var GameBoard = function GameBoard(level_number) {
   this.loadLevel(Game.level_data[level_number]);
 };
 
+
+//All below here is the setup for the audio accompanying the game, this is where to look for the framework of sounds
 var GameAudio = new function() {
   this.load_queue = [];
   this.loading_sounds = 0;
