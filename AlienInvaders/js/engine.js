@@ -28,7 +28,7 @@ var Game = new function() {
   this.loop = function() { 
     Game.board.step(30/1000); 
     Game.board.render(Game.canvas);
-    setTimeout(Game.loop,30);
+    setTimeout(Game.loop,20);
   };
 };
 
@@ -61,11 +61,11 @@ var GameScreen = function GameScreen(text,text2,callback) {
   this.render = function(canvas) {
     canvas.clearRect(0,0,Game.width,Game.height);
 //This here refers to font style, size and type, as well as the position it is on the screen and colour
-      canvas.font = "bold 70px arial";
+      canvas.font = "120px lazysans";
     var measure = canvas.measureText(text);  
     canvas.fillStyle = "#000"; //Colour of writing
     canvas.fillText(text,Game.width/2 - measure.width/2,Game.height/2); //Position on screen /2 is half way down and across the screen, exactly central
-    canvas.font = "bold 20px arial";
+    canvas.font = "30px lazysans";
     var measure2 = canvas.measureText(text2);
     canvas.fillText(text2,Game.width/2 - measure2.width/2,Game.height/2 + 40);
   };
