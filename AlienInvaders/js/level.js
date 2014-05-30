@@ -48,8 +48,8 @@
 
 //This is where to change the aliens, player and lazers in terms of their positioning within the sprites.
 var spriteData = {
-    'alien1': { sx: 0,  sy: 0,  w: 41, h: 37, cls: Alien, frames: 2 },
-    'alien2': { sx: 0,  sy: 38, w: 41, h: 37, cls: Alien, frames: 2 },
+    'alien1': { sx: 0,  sy: 0,  w: 41, h: 39, cls: Alien, frames: 2 },
+    'alien2': { sx: 0,  sy: 38, w: 41, h: 39, cls: Alien, frames: 2 },
     'player': { sx: 103,  sy: 46, w: 62, h: 55, cls: Player },
     'missile': { sx: 169,  sy:66, w: 31,  h: 34, cls: Missile }
   }
