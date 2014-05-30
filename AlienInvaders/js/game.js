@@ -61,7 +61,7 @@ Alien.prototype.die = function() {
   this.board.remove(this);
 }
 
-Alien.prototype.step = function(dt) {
+Alien.prototype.step = function(dt) {  //This moves the alien
   this.mx += dt * this.flock.dx;
   this.y += this.flock.dy;
   if(Math.abs(this.mx) > 10) {
@@ -70,7 +70,7 @@ Alien.prototype.step = function(dt) {
     }
     this.x += this.mx;
     this.mx = 0;
-    this.frame = (this.frame+1) % 2;
+    this.frame = (this.frame+1) % 2; //This is the amount of frames
     if(this.x > Game.width - Sprites.map.alien1.w * 2) this.flock.hit = -1;
     if(this.x < Sprites.map.alien1.w) this.flock.hit = 1;
   }
@@ -99,7 +99,7 @@ Player.prototype.die = function() {
   Game.callbacks['die']();
 }
 
-Player.prototype.step = function(dt) {
+Player.prototype.step = function(dt) {   //Moving the player only left and right
   if(Game.keys['left']) { this.x -= 100 * dt; }
   if(Game.keys['right']) { this.x += 100 * dt; }
 
@@ -108,7 +108,7 @@ Player.prototype.step = function(dt) {
 
   this.reloading--;
 
-  if(Game.keys['fire'] && this.reloading <= 0 && this.board.missiles < 5) {
+  if(Game.keys['fire'] && this.reloading <= 0 && this.board.missiles < 5) { //This allows player to fire missiles with laser
     GameAudio.play('fire');
     this.board.addSprite('missile',
                           this.x + this.w/2 - Sprites.map.missile.w/2,
