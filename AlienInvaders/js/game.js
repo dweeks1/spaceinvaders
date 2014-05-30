@@ -77,6 +77,8 @@ Alien.prototype.step = function(dt) {  //This moves the alien
   return true;
 }
 
+
+//How often the aliens should fire their missiles
 Alien.prototype.fireSometimes = function() {
       if(Math.random()*100 < 10) {
         this.board.addSprite('missile',this.x + this.w/2 - Sprites.map.missile.w/2,

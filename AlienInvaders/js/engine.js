@@ -3,17 +3,21 @@ var Game = new function() {
   var KEY_CODES = { 37:'left', 39:'right', 32 :'fire' };
   this.keys = {};
 
-  this.initialize = function(canvas_dom,level_data,sprite_data,callbacks) {
+ 
+//Create canvas
+    this.initialize = function(canvas_dom,level_data,sprite_data,callbacks) {
     this.canvas_elem = $(canvas_dom)[0];
     this.canvas = this.canvas_elem.getContext('2d');
     this.width = $(this.canvas_elem).attr('width');
     this.height= $(this.canvas_elem).attr('height');
 
-    $(window).keydown(function(event) {
+//Listen for keypress    
+        $(window).keydown(function(event) {
       if(KEY_CODES[event.keyCode]) Game.keys[KEY_CODES[event.keyCode]] = true;
     });
 
-    $(window).keyup(function(event) {
+//Ignore key release
+      $(window).keyup(function(event) {
       if(KEY_CODES[event.keyCode]) Game.keys[KEY_CODES[event.keyCode]] = false;
     });
 
@@ -174,7 +178,8 @@ var GameAudio = new function() {
     audio_channels[a]['finished'] = -1;	
   }
 
-  this.load = function(files,callback) {
+//Load game sounds
+    this.load = function(files,callback) {
     var audioCallback = function() { GameAudio.finished(callback); }
 
     for(name in files) {
