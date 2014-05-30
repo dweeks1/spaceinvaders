@@ -110,7 +110,7 @@ Player.prototype.step = function(dt) {   //Moving the player only left and right
 
   this.reloading--;
 
-  if(Game.keys['fire'] && this.reloading <= 0 && this.board.missiles < 5) { //This allows player to fire missiles with laser
+  if(Game.keys['fire'] && this.reloading <= 0 && this.board.missiles < 10) { //This allows player to fire missiles with laser
     GameAudio.play('fire');
     this.board.addSprite('missile',
                           this.x + this.w/2 - Sprites.map.missile.w/2,
