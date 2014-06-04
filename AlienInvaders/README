@@ -1,4 +1,18 @@
-A Simple HTML5 Game To-be used in a Tutorial
+What I have changed:
 
-Slides up at:
-http://www.slideshare.net/cykod/html5-game-development-introduction-5815787
+Background of canvas
+Changed the style of sprites to fit with theme
+Changed the missile to fit with theme
+Changed the player
+Font on game screens
+Added 2 extra levels
+Repositioned enemies order on the screen
+Increased size of canvas from 500×500 to 750×750 pixels
+Added explanation notes to code
+Made an A2 flow chart with description of game logic with snippets of code included
+Reinvented new colour theme
+Change sounds on the game to go with new theme
+Slightly modify sprites with circles around
+Increased speed of the lasers shooting in the game
+Finished adding notes to code and uploaded to github
+Changed the external background to black
